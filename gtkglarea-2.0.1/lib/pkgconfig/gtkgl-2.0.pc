@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GtkGLArea
+Description: an OpenGL widget for GTK+
+Version: 2.0.1
+Requires: gtk+-2.0
+Libs: -L${libdir} -lgtkgl-2.0
+Cflags: -I${includedir}/gtkgl-2.0 -mms-bitfields
