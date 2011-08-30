@@ -70,7 +70,9 @@ public:
     }
     catch ( ExpectedExceptionType &e )
     {
+#if defined __EXCEPTIONS // lol begin
       checkException( e );
+#endif // lol end
       return;
     }
 
