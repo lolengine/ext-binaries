@@ -2,10 +2,11 @@
 # Building contribs #
 #####################
 
+
 Glew
 ----
 
-Download page: http://sourceforge.net/projects/glew/files/glew/1.7.0/glew-1.7.0.tgz/download
+Download page: http://sourceforge.net/projects/glew/files/glew
 
 - fix config/Makefile.linux-mingw32 and config/Makefile.linux-mingw64 to
   get the right compiler and linker executable names.
@@ -19,4 +20,37 @@ Download page: http://sourceforge.net/projects/glew/files/glew/1.7.0/glew-1.7.0.
 - make SYSTEM=linux-mingw64
 - x86_64-w64-mingw32-ranlib lib/*.a
 - copy lib/*.a in the contrib directory as *.lib
+
+
+SDL
+---
+
+Download page: http://www.libsdl.org/release/
+
+Win32:
+- just take the pre-compiled binaries from upstream
+
+Win64:
+- ./configure --host=x86_64-w64-mingw32
+- deactivate NONAMELESSUNION in src/video/windx5/directx.h
+- make -j6
+- copy build/libSDLmain.a as SDLmain.lib
+- copy build/.libs/libSDL.a as SDL.lib
+- copy build/.libs/SDL.dll as SDL.dll
+
+
+SDL_Image
+---------
+
+Download page: http://www.libsdl.org/projects/SDL_image/release/
+
+Hard to do, requires libjpeg, libtiff, libpng, zlib...
+
+
+SDL_Mixer
+---------
+
+Download page: http://www.libsdl.org/projects/SDL_mixer/release/
+
+Hard to do, requires libogg, libvorbis, mikmod, libsmpeg...
 
