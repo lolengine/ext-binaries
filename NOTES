@@ -1,0 +1,22 @@
+#####################
+# Building contribs #
+#####################
+
+Glew
+----
+
+Download page: http://sourceforge.net/projects/glew/files/glew/1.7.0/glew-1.7.0.tgz/download
+
+- fix config/Makefile.linux-mingw32 and config/Makefile.linux-mingw64 to
+  get the right compiler and linker executable names.
+
+- make SYSTEM=linux-mingw32
+- i686-w64-mingw32-ranlib lib/*.a
+- copy lib/*.a in the contrib directory as *.lib
+
+- make clean
+
+- make SYSTEM=linux-mingw64
+- x86_64-w64-mingw32-ranlib lib/*.a
+- copy lib/*.a in the contrib directory as *.lib
+
