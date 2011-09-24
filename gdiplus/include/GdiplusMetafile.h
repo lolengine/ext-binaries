@@ -350,7 +350,7 @@ public:
         return metafileRasterizationLimitDpi;
     }
 
-    static UINT Metafile::EmfToWmfBits(
+    static UINT EmfToWmfBits(
         IN HENHMETAFILE       hemf,
         IN UINT               cbData16,
         OUT LPBYTE            pData16,

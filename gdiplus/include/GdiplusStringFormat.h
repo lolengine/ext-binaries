@@ -217,7 +217,7 @@ public:
         ));
     }
 
-    StringTrimming StringFormat::GetTrimming() const
+    StringTrimming GetTrimming() const
     {
         StringTrimming trimming;
         SetStatus(DllExports::GdipGetStringFormatTrimming(
