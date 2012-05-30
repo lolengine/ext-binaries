@@ -65,3 +65,9 @@ Download page: http://www.libsdl.org/projects/SDL_mixer/release/
 
 Hard to do, requires libogg, libvorbis, mikmod, libsmpeg...
 
+
+Flex
+----
+
+Just copied FlexLexer.h from a Debian installation.
+
