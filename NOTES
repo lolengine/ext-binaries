@@ -71,3 +71,9 @@ Flex
 
 Just copied FlexLexer.h from a Debian installation.
 
+Libcaca
+-------
+
+Ran build-win32 and build-64 on a Debian installation, copied the
+resulting .lib files and some headers.
+

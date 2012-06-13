@@ -1,0 +1,13 @@
+prefix=/
+exec_prefix=${prefix}
+libdir=/lib
+includedir=${prefix}/include
+
+Name: caca
+Description: Colour ASCII-Art library
+Version: 0.99.beta18
+Requires: 
+Conflicts: 
+Libs: -L${libdir} -lcaca
+Libs.private: 
+Cflags: -I${includedir}
