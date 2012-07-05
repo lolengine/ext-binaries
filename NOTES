@@ -42,12 +42,12 @@ Win32:
 - just take the pre-compiled binaries from upstream
 
 Win64:
-- ./configure --host=x86_64-w64-mingw32
+- ./configure --host=x86_64-w64-mingw32 CPPFLAGS=-D_CRTIMP=
 - deactivate NONAMELESSUNION in src/video/windx5/directx.h
 - make -j6
-- copy build/libSDLmain.a as SDLmain.lib
-- copy build/.libs/libSDL.a as SDL.lib
-- copy build/.libs/SDL.dll as SDL.dll
+- copy build/.libs/libSDLmain.a
+- copy build/.libs/libSDL.a
+- copy build/.libs/libSDL.dll.a
 
 
 SDL_Image
