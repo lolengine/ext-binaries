@@ -38,16 +38,8 @@ SDL
 
 Download page: http://www.libsdl.org/release/
 
-Win32:
-- just take the pre-compiled binaries from upstream
-
-Win64:
-- ./configure --host=x86_64-w64-mingw32 CPPFLAGS=-D_CRTIMP=
-- deactivate NONAMELESSUNION in src/video/windx5/directx.h
-- make -j6
-- copy build/.libs/libSDLmain.a
-- copy build/.libs/libSDL.a
-- copy build/.libs/libSDL.dll.a
+Just take the pre-compiled binaries from upstream (for VC). For other
+ways to build SDL, see older versions of this document.
 
 
 SDL_Image
