@@ -45,9 +45,10 @@ Download page: http://www.libsdl.org/release/
   (note: CPPFLAGS=-D_CRTIMP= used to be needed)
 
     ./configure --host=x86_64-w64-mingw32
-    make build/libSDLmain.la
+    make clean all
 
 - copy build/.libs/libSDLmain.a
+- copy build/.libs/libSDL.dll.a
 
 
 SDL_Image
