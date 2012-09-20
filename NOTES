@@ -70,7 +70,14 @@ Hard to do, requires libogg, libvorbis, mikmod, libsmpeg...
 Flex
 ----
 
-Just copied FlexLexer.h from a Debian installation.
+Copied FlexLexer.h and the executable from a MinGW installation.
+
+
+Bison
+-----
+
+Copied /usr/share/bison and the executable from a MinGW installation.
+
 
 Libcaca
 -------
