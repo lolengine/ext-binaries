@@ -1,6 +1,6 @@
-#####################
-# Building contribs #
-#####################
+##############################
+# Building external software #
+##############################
 
 
 Glew
@@ -8,29 +8,10 @@ Glew
 
 Download page: http://sourceforge.net/projects/glew/files/glew
 
-- fix config/Makefile.linux-mingw32 and config/Makefile.linux-mingw64 to
-  get the right compiler and linker executable names.
+- take the pre-compiled glew32s.lib ("s" is for "static") versions for
+  both win32 and win64.
 
-    sed -i 's/i586-mingw32msvc/i686-w64-mingw32/g' config/*.linux-mingw32
-    sed -i 's/amd64-mingw32msvc/x86_64-w64-mingw32/g' config/*.linux-mingw64
-
-- fix Makefile for static builds
-
-    sed -i 's/-DGLEW_NO_GLU.*CFLAGS[^P]*CFLAGS/-DGLEW_STATIC &/g' Makefile
-
-- build for Win32
-
-    make SYSTEM=linux-mingw32 clean all
-    i686-w64-mingw32-ranlib lib/libglew32.a
-
-- copy lib/libglew32.a in the contrib directory as glew32.lib
-
-- build for Win64
-
-    make SYSTEM=linux-mingw64 clean all
-    x86_64-w64-mingw32-ranlib lib/libglew32.a
-
-- copy lib/libglew32.a in the contrib directory as glew32.lib
+- copy include/GL/ in the external directory.
 
 
 SDL
