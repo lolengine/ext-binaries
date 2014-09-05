@@ -19,17 +19,9 @@ SDL
 
 Download page: http://www.libsdl.org/release/
 
-- take the pre-compiled binaries for Visual C++
-- take the pre-compiled libSDLmain.a for 32-bit mingw32
-
-- download the source and build libSDLmain.a for 64-bit mingw32
-  (note: CPPFLAGS=-D_CRTIMP= used to be needed)
-
-    ./configure --host=x86_64-w64-mingw32
-    make clean all
-
-- copy build/.libs/libSDLmain.a
-- copy build/.libs/libSDL.dll.a
+- download SDL2-devel for mingw and for VC
+- take the pre-compiled 32- and 64-bit binaries for mingw32
+- take the pre-compiled 32- and 64-bit binaries for Visual C++
 
 
 SDL_Image
