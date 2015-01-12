@@ -17,15 +17,15 @@
 #include <vector>
 
 #include <assert.h>
-#include <cxxabi.h>
+//#include <cxxabi.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdlib.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include <stdio.h>
 
 #include <sys/stat.h>
-#include <sys/mman.h>
+//#include <sys/mman.h>
 #include <sys/types.h>
 
 #include <pegtl/constants.hh>

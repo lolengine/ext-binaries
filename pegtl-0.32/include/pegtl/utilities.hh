@@ -88,9 +88,11 @@ namespace pegtl
 	    result += char( i );
 	    break;
 	 default: {
+#if 0
 	    char tmp[ 12 ];
 	    ::snprintf( tmp, sizeof( tmp ), "\\u%04x", i );
 	    result += tmp;
+#endif
 	 }  break;
       }
    }
@@ -179,6 +181,7 @@ namespace pegtl
       else if ( ! mangled[ 0 ] ) {
 	 return "(empty)";
       }
+#if 0
       int status = -1;
       const freer< const char > demangled( abi::__cxa_demangle( mangled, 0, 0, & status ) );
 
@@ -188,6 +191,7 @@ namespace pegtl
       else if ( 0 == status ) {
 	 return std::string( demangled.get() );
       }
+#endif
       return mangled;
    }
 
@@ -209,6 +213,7 @@ namespace pegtl
       return a + demangle< T1 >() + b + demangle< T2, Ts ... >( "", b, "" ) + c;
    }
 
+#if 0
    class file_reader : private nocopy< file_reader >
    {
    public:
@@ -379,6 +384,7 @@ namespace pegtl
       }
       return nrv;
    }
+#endif
 
 } // pegtl
 

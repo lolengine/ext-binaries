@@ -10,6 +10,7 @@
 
 namespace pegtl
 {
+#if 0
    template< typename Location >
    struct file_input
 	 : private file_mapper,
@@ -26,6 +27,7 @@ namespace pegtl
 
    typedef file_input< ascii_location > ascii_file_input;
    typedef file_input< dummy_location > dummy_file_input;
+#endif
 
    // Functions to parse input given the filename as std::string.
 
