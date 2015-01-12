@@ -55,22 +55,26 @@ namespace pegtl
 
    struct trace_debug : public debug_base
    {
+// LOL BEGIN
       template< typename TopRule >
       explicit
-      trace_debug( const tag< TopRule > & help, const bool trace = true )
-	    : m_trace( trace ),
+      trace_debug( const tag< TopRule > & help, const bool in_trace = true )
+	    : m_trace( in_trace ),
 	      m_printer( help )
       { }
+// LOL END
 
       bool trace() const
       {
 	 return m_trace;
       }
 
-      void set_trace( const bool trace )
+// LOL BEGIN
+      void set_trace( const bool in_trace )
       {
-	 m_trace = trace;
+	 m_trace = in_trace;
       }
+// LOL END
 
       template< bool Must, typename Rule, typename Input, typename ... States >
       bool match( Input & in, States && ... st )
