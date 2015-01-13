@@ -17,15 +17,21 @@
 #include <vector>
 
 #include <assert.h>
-//#include <cxxabi.h>
+#if !_WIN32 // LOL BEGIN
+#include <cxxabi.h>
+#endif // LOL END
 #include <errno.h>
 #include <fcntl.h>
 #include <stdlib.h>
-//#include <unistd.h>
+#if !_WIN32 // LOL BEGIN
+#include <unistd.h>
+#endif // LOL END
 #include <stdio.h>
 
 #include <sys/stat.h>
-//#include <sys/mman.h>
+#if !_WIN32 // LOL BEGIN
+#include <sys/mman.h>
+#endif // LOL END
 #include <sys/types.h>
 
 #include <pegtl/constants.hh>
