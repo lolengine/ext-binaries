@@ -182,7 +182,7 @@ namespace pegtl
 	 return "(empty)";
       }
 // LOL BEGIN
-#if !_WIN32
+#if !_WIN32 && !EMSCRIPTEN
 // LOL END
       int status = -1;
       const freer< const char > demangled( abi::__cxa_demangle( mangled, 0, 0, & status ) );

@@ -17,7 +17,7 @@
 #include <vector>
 
 #include <assert.h>
-#if !_WIN32 // LOL BEGIN
+#if !_WIN32 && !EMSCRIPTEN // LOL BEGIN
 #include <cxxabi.h>
 #endif // LOL END
 #include <errno.h>
