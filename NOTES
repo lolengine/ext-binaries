@@ -103,3 +103,9 @@ Xbox 360:
 - reload solution
 - build only required projects
 
+
+Imgui
+-----
+
+Just copy .cpp and .h files in the Imgui subdirectory.
+
