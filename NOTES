@@ -1,7 +1,11 @@
 ##############################
 # Building external software #
 ##############################
-
+## If any name change occurs, update:
+##  - .\lolengine\configure.ac
+##  - .\lolengine\build\lol-build
+##  - .\lolengine\build\msbuild\lol.vars.props
+##############################
 
 Glew
 ----
