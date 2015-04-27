@@ -335,6 +335,9 @@ namespace pegtl
    {
       return file_reader( filename ).read< std::vector< Type > >();
    }
+// LOL BEGIN
+#endif
+// LOL END
 
    template< typename T >
    std::string to_string( const T & t )
@@ -390,9 +393,6 @@ namespace pegtl
       }
       return nrv;
    }
-// LOL BEGIN
-#endif
-// LOL END
 
 } // pegtl
 

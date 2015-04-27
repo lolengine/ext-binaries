@@ -101,3 +101,9 @@ Imgui
 
 Just copy .cpp and .h files in the Imgui subdirectory.
 
+
+mingw-std-threads
+-----------------
+
+Cloned from https://github.com/meganz/mingw-std-threads
+
