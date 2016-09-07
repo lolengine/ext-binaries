@@ -74,36 +74,3 @@ Operations to create the Windows binaries:
  rm -rf $T/usr
  find $T -name 'lib*.a' | sed -e 's/\(.*\)lib\(.*\).a/& \1\2.lib/' | while read a b; do mv $a $b; done
 
-
-Bullet
-------
-
-Download page: http://code.google.com/p/bullet/downloads/list
-
-Win32:
-- build normally using Visual Studio 2010
-
-Win64:
-- build normally using Visual Studio 2010
-- remove _x64 suffix from object names
-
-Xbox 360:
-- add Xbox 360 platform to the vs2010 solution, using eg. Win32 as a preset
-- save solution and exit vs2010
-- sed -i 's@<ItemDefinitionGroup.*Xbox 360.*@&<ClCompile><PreprocessorDefinitions>_XBOX;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile>@' msvc/vs2010/*.vcxproj
-- sed -i 's@.*MachineX86.*@@' msvc/vs2010/*vcxproj
-- reload solution
-- build only required projects
-
-
-Imgui
------
-
-Just copy .cpp and .h files in the Imgui subdirectory.
-
-
-mingw-std-threads
------------------
-
-Cloned from https://github.com/meganz/mingw-std-threads
-
