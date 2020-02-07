@@ -9,13 +9,11 @@ CACHE=.conan-cache
 # pacman -S mingw64/mingw-w64-x86_64-python3-yaml
 # pip3 install conan
 
-for arch in x86 x86_64; do
-    if [ "${arch}" = x86 ]; then
-        conan install -s arch="${arch}" -if ${CACHE} . || conan install -s arch="${arch}" --build openssl -if ${CACHE} .
-    else
-        conan install -s arch="${arch}" -if ${CACHE} .
-    fi
-    for pkg in openssl zlib; do
+for arch in i686 x86_64; do
+    conan_arch="$(echo $arch | sed 's/i686/x86/')"
+    conan install -s build_type=Debug -s arch="${conan_arch}" -if ${CACHE} . \
+      || conan install -s build_type=Debug -s arch="${conan_arch}" --build openssl -if ${CACHE} .
+    for pkg in openssl zlib sdl2; do
         install_path="$(awk "/<Conan-${pkg}-Root>/ { gsub(/ *<[^>]*> */, "'""'"); print }" "${CACHE}/conanbuildinfo.props")"
         chunks="$(echo "$install_path" | sed 's@.*\.conan/data/@@')"
         test "${pkg}" = "$(echo "$chunks" | cut -f1 -d/)"

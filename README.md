@@ -17,6 +17,10 @@ Ensure conan is installed:
  - `pacman -S mingw64/mingw-w64-x86_64-python3-yaml`
  - `pip3 install conan`
 
+Add alternate remotes:
+
+ - `conan remote add -f bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"`
+
 Then run the script:
 
  - `download-openssl-msvc.sh`
