@@ -8,6 +8,20 @@ If any name change occurs, update:
  - `build/msbuild/lol.vars.props`
 
 
+OpenSSL
+-------
+
+Ensure conan is installed:
+
+ - `pacman -S mingw64/mingw-w64-x86_64-python3-markupsafe`
+ - `pacman -S mingw64/mingw-w64-x86_64-python3-yaml`
+ - `pip3 install conan`
+
+Then run the script:
+
+ - `download-openssl-msvc.sh`
+
+
 Glew
 ----
 
